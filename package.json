@@ -44,20 +44,14 @@
     "bugs": "https://github.com/nduvieilh/Wedding-Ghost-Theme/issues",
     "contributors": "https://github.com/nduvieilh/Wedding-Ghost-Theme/graphs/contributors",
     "devDependencies": {
-        "@tryghost/release-utils": "0.3.2",
-        "autoprefixer": "9.5.1",
-        "beeper": "1.1.1",
-        "cssnano": "4.1.10",
+        "bootstrap": "^4.3.1",
         "gscan": "2.6.0",
         "gulp": "4.0.2",
-        "gulp-livereload": "4.0.1",
-        "gulp-postcss": "8.0.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "4.2.0",
-        "postcss-color-function": "4.1.0",
-        "postcss-custom-properties": "8.0.10",
-        "postcss-easy-import": "3.0.0",
-        "pump": "3.0.0"
+        "node-sass": "^4.12.0"
     },
     "config": {
         "posts_per_page": 25,
