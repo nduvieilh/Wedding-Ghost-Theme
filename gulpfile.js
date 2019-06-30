@@ -25,7 +25,9 @@ gulp.task('sass:watch', function () {
 gulp.task('sass', function () {
  return gulp.src(files.sass)
   .pipe(sourcemaps.init())
-  .pipe(sass().on('error', sass.logError))
+  .pipe(sass({
+      includePaths: ['node_modules']
+  }).on('error', sass.logError))
   .pipe(sourcemaps.write('./maps'))
   .pipe(gulp.dest(outfiles.css));
 });

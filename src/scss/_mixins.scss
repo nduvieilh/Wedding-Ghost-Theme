@@ -1,0 +1,35 @@
+@mixin blur-background($blur-amount) {
+    $blur-offset: -$blur-amount * 2;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: $blur-offset;
+        left: $blur-offset;
+        right: $blur-offset;
+        bottom: $blur-offset;
+        background-image: inherit;
+        background-position: center;
+        background-size: 100vmax;
+        filter: blur($blur-amount);
+        z-index: 10;
+    }
+}
+
+@mixin tint-background($tint-colors, $degree: 45deg) {
+    &:after {
+        content: "" !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        z-index: 20;
+
+        @if length($tint-colors) > 1 {
+            background: linear-gradient($degree, $tint-colors);
+        } @else {
+            background-color: $tint-color;
+        }
+    }
+}
