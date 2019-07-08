@@ -73,6 +73,16 @@
     }
 }
 
+// Post styling //////////////////////////////////
+.post-full.post:not(.no-container):not(.no-image) {
+    >.post-full-content {
+        border: 1px solid $color-card-border;
+        border-radius: 5px;
+        box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+        padding-bottom: 50px;
+    }
+}
+
 
 // Card styling //////////////////////////////////
 .post-card {

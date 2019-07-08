@@ -9,6 +9,7 @@ const path = require('path');
 // }
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: './src/index.js',
@@ -42,13 +43,41 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     {
+                        loader: 'postcss-loader', // Run post css actions
+                        options: {
+                            plugins: function () { // post css plugins, can be exported to postcss.config.js
+                                return [
+                                    require('precss'),
+                                    require('autoprefixer')
+                                ];
+                            }
+                        }
+                    },
+                    {
                         loader: 'sass-loader',
                         options: {
                             sourceMap: true
                         }
-                    }
+                    },
+                    
                 ]
-            }
+            },
+            // {
+            //     test: /\.scss$/,
+            //     use: [
+            //         { loader: 'style-loader' },
+            //         {
+            //             loader: 'css-loader', options: {
+            //                 sourceMap: true, modules: true,
+            //                 localIdentName: '[local]_[hash:base64:5]'
+            //             }
+            //         },
+            //         {
+            //         {
+            //             loader: 'sass-loader', options: { sourceMap: true }
+            //         }
+            //     ]
+            // }
             ///...
             // {
             //     test: /\.(scss)$/,

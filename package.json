@@ -2,7 +2,7 @@
     "name": "wedding-theme",
     "description": "Wedding theme for duvieilhervinwedding.com",
     "demo": "https://www.duvieilhervinwedding.com",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "private": true,
     "engines": {
         "ghost": ">=2.0.0",
@@ -78,5 +78,13 @@
             }
         }
     },
-    "dependencies": {}
+    "dependencies": {},
+    "browserslist": [
+        "defaults",
+        "not ie < 11",
+        "last 2 versions",
+        "> 1%",
+        "iOS 7",
+        "last 3 iOS versions"
+    ]
 }
